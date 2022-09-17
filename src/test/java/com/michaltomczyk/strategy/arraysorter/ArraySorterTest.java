@@ -1,5 +1,5 @@
-import com.michaltomczyk.ArrayBubbleSorter;
-import com.michaltomczyk.ArraySelectionSorter;
+package com.michaltomczyk.strategy.arraysorter;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
