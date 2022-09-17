@@ -1,10 +1,10 @@
 package com.michaltomczyk.strategy.arraysorter;
 
-public class ArrayBubbleSorter {
+public class ArrayBubbleSorter extends ArraySorter{
     public int[] sort(int[] data, boolean ascending) {
         for(int i = 0; i < data.length; i++){
             for(int j = i + 1; j < data.length; j++){
-                if(shouldSwap(data[i], data[j], ascending)){
+                if(this.shouldSwap(data[i], data[j], ascending)){
                     int temp = data[j];
 
                     data[j] = data[i];
@@ -13,9 +13,5 @@ public class ArrayBubbleSorter {
             }
         }
         return data;
-    }
-
-    private boolean shouldSwap(int a, int b, boolean ascending){
-        return (a < b) ^ ascending;
     }
 }
