@@ -1,9 +1,13 @@
 package com.michaltomczyk.strategy.arraysorter;
 
-public abstract class ArraySorter {
-    public abstract int[] sort(int[] data, boolean ascending);
+public class ArraySorter {
+    protected SortingStrategy sortingStrategy;
 
-    protected boolean shouldSwap(int a, int b, boolean ascending){
-        return (a < b) ^ ascending;
+    public int[] sort(int[] data, boolean ascending){
+        return this.sortingStrategy.sort(data, ascending);
+    }
+
+    public void setSortingStrategy(SortingStrategy sortingStrategy) {
+        this.sortingStrategy = sortingStrategy;
     }
 }
