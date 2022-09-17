@@ -1,5 +1,9 @@
 package com.michaltomczyk.strategy.arraysorter;
 
-public interface SortingStrategy {
-    int[] sort(int[] data, boolean ascending);
+public abstract class SortingStrategy {
+    abstract int[] sort(int[] data, boolean ascending);
+
+    protected boolean shouldSwap(int a, int b, boolean ascending){
+        return (a < b) ^ ascending;
+    }
 }

@@ -1,6 +1,6 @@
 package com.michaltomczyk.strategy.arraysorter;
 
-public class SelectionSortingStrategy implements SortingStrategy{
+public class SelectionSortingStrategy extends SortingStrategy{
     public int[] sort(int[] data, boolean ascending) {
         for(int i = 0; i < data.length; i++){
             int extremeIndex = i;
@@ -17,9 +17,5 @@ public class SelectionSortingStrategy implements SortingStrategy{
         }
 
         return data;
-    }
-
-    protected boolean shouldSwap(int a, int b, boolean ascending){
-        return (a < b) ^ ascending;
     }
 }

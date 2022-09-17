@@ -1,6 +1,6 @@
 package com.michaltomczyk.strategy.arraysorter;
 
-public class BubbleSortingStrategy implements SortingStrategy{
+public class BubbleSortingStrategy extends SortingStrategy{
     public int[] sort(int[] data, boolean ascending) {
         for(int i = 0; i < data.length; i++){
             for(int j = i + 1; j < data.length; j++){
@@ -13,9 +13,5 @@ public class BubbleSortingStrategy implements SortingStrategy{
             }
         }
         return data;
-    }
-
-    protected boolean shouldSwap(int a, int b, boolean ascending){
-        return (a < b) ^ ascending;
     }
 }
