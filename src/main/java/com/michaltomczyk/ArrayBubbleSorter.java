@@ -1,6 +1,6 @@
 package com.michaltomczyk;
 
-public class ArraySorter {
+public class ArrayBubbleSorter {
     public int[] sort(int[] data, boolean ascending) {
         for(int i = 0; i < data.length; i++){
             for(int j = i + 1; j < data.length; j++){
