@@ -19,12 +19,12 @@ public class ArraySorterTest {
 
     @Test
     void shouldSortArrayAscending() {
-        int[] data = { 5, 2, 3, 4, 1};
-        int[] expected = {1, 2, 3, 4, 5};
+        Integer[] data = { 5, 2, 3, 4, 1};
+        Integer[] expected = {1, 2, 3, 4, 5};
 
         for(SortingStrategy strategy: this.sortingStrategies){
             this.arraySorter.setSortingStrategy(strategy);
-            int[] result = this.arraySorter.sort(data, true);
+            Integer[] result = this.arraySorter.sort(data, true);
 
             Assertions.assertArrayEquals(expected, result);
         }
@@ -32,12 +32,12 @@ public class ArraySorterTest {
 
     @Test
     void shouldSortArrayDescending() {
-        int[] data = { 5, 2, 3, 4, 1};
-        int[] expected = {5, 4, 3, 2, 1};
+        Integer[] data = { 5, 2, 3, 4, 1};
+        Integer[] expected = {5, 4, 3, 2, 1};
 
         for(SortingStrategy strategy: this.sortingStrategies){
             this.arraySorter.setSortingStrategy(strategy);
-            int[] result = this.arraySorter.sort(data, false);
+            Integer[] result = this.arraySorter.sort(data, false);
 
             Assertions.assertArrayEquals(expected, result);
         }

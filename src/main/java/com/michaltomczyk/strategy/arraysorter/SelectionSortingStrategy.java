@@ -1,7 +1,7 @@
 package com.michaltomczyk.strategy.arraysorter;
 
 public class SelectionSortingStrategy extends SortingStrategy{
-    public int[] sort(int[] data, boolean ascending) {
+    public Integer[] sort(Integer[] data, boolean ascending) {
         for(int i = 0; i < data.length; i++){
             int extremeIndex = i;
 
